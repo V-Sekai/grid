@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest    
     permissions:
       pull-requests: write
+      actions: write
     container:
       image: fedora:39
     env:
@@ -78,9 +79,9 @@ jobs:
                 ;;
             esac
             bencher run \
-            --project 'v-sekai-world' \
+            --project 'v-sekai-world-grid' \
             --adapter shell_hyperfine \
-            --branch '${{ github.head_ref }}' \
+            --branch '${{ github.event_name == 'pull_request' && github.head_ref || github.ref }}' \
             --testbed ubuntu-latest \
             --threshold-measure latency \
             --threshold-test t_test \
