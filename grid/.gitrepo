@@ -4,9 +4,9 @@
 ; git-subrepo command. See https://github.com/ingydotnet/git-subrepo#readme
 ;
 [subrepo]
-	remote = https://github.com/V-Sekai/xr-grid.git
-	branch = next
-	commit = a18ca8d15c9967c083bc33c44c9029c4fb4e6607
-	parent = ddf629f5069e6b4c1c7874be43782cacdbe1c555
+	remote = https://github.com/V-Sekai/grid.git
+	branch = main
+	commit = c084b084b333fb8f8dc72115d6c8a82d160a3c26
+	parent = c084b084b333fb8f8dc72115d6c8a82d160a3c26
 	method = merge
 	cmdver = 0.4.6
